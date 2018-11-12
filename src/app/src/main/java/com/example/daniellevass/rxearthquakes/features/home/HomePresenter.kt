@@ -24,8 +24,14 @@ class HomePresenter : BasePresenter<HomePresenter.View>() {
     }
 
     fun generateEarthquakes():List<Earthquake>{
+
+        val currentEpoch = System.currentTimeMillis() / 1000L
+
         return arrayListOf<Earthquake>(
-                Earthquake("place", 5.4f, 1539026391, false, "type")
+                Earthquake("not near my house", 1.4f, currentEpoch - 10, false, "type"),
+                Earthquake("not near my house", 3.4f, currentEpoch - 200, false, "type"),
+                Earthquake("not near my house", 5.4f, currentEpoch - 3000, false, "type"),
+                Earthquake("not near my house", 7.4f, 1539026391, false, "type")
         )
     }
 

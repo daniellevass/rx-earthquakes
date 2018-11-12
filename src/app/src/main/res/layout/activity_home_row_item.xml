@@ -6,20 +6,43 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
+    <FrameLayout
+        android:id="@+id/containerMagnitude"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:background="@drawable/magnitude_square_green"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/lblMagnitude"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            android:textSize="26sp"
+            />
+    </FrameLayout>
+
     <TextView
         android:id="@+id/lblTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_text"
-        android:textSize="32sp"
+        android:textSize="28sp"
+        android:layout_toEndOf="@id/containerMagnitude"
+        android:layout_marginStart="20dp"
         />
 
     <TextView
         android:id="@+id/lblDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-5dp"
+        android:textColor="@color/primary_text"
         android:layout_below="@id/lblTitle"
-        android:textColor="@color/primary_text"/>
+        android:layout_toEndOf="@id/containerMagnitude"
+
+        />
 
 
 </RelativeLayout>
